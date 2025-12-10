@@ -1,0 +1,42 @@
+application output
+Calling 'add' system call (add to front)
+Added: 61
+Added: 42
+Added: 33
+Calling 'insert' system call (insert after a node)
+Inserted : 89 after 61
+Inserted : 18 after 42
+Inserted : 65 after 33
+Calling 'remove' system call (remove a node)
+Removed : 61
+Removed : 42
+Removed : 33
+Removed : 89
+Removed : 18
+Removed : 65
+
+dmesg output
+[ 6398.696290] sys_os2025_add: added 61
+[ 6398.696423] LIST: head -> [61] -> NULL
+[ 6398.696553] sys_os2025_add: added 42
+[ 6398.696571] LIST: head -> [42] -> [61] -> NULL
+[ 6398.696613] sys_os2025_add: added 33
+[ 6398.696625] LIST: head -> [33] -> [42] -> [61] -> NULL
+[ 6398.696680] sys_os2025_insert: inserted 89 after 61
+[ 6398.696696] LIST: head -> [33] -> [42] -> [61] -> [89] -> NULL
+[ 6398.696754] sys_os2025_insert: inserted 18 after 42
+[ 6398.696768] LIST: head -> [33] -> [42] -> [18] -> [61] -> [89] -> NULL
+[ 6398.696827] sys_os2025_insert: inserted 65 after 33
+[ 6398.696840] LIST: head -> [33] -> [65] -> [42] -> [18] -> [61] -> [89] -> NULL
+[ 6398.696911] sys_os2025_remove: deleted 61
+[ 6398.696923] LIST: head -> [33] -> [65] -> [42] -> [18] -> [89] -> NULL
+[ 6398.696984] sys_os2025_remove: deleted 42
+[ 6398.696996] LIST: head -> [33] -> [65] -> [18] -> [89] -> NULL
+[ 6398.697046] sys_os2025_remove: deleted 33
+[ 6398.697057] LIST: head -> [65] -> [18] -> [89] -> NULL
+[ 6398.697100] sys_os2025_remove: deleted 89
+[ 6398.697110] LIST: head -> [65] -> [18] -> NULL
+[ 6398.697143] sys_os2025_remove: deleted 18
+[ 6398.697153] LIST: head -> [65] -> NULL
+[ 6398.697179] sys_os2025_remove: deleted 65
+[ 6398.697189] LIST: head -> NULL
