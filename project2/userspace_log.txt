@@ -1,0 +1,22 @@
+==========================================
+Starting EEVDF Scheduler Experiment
+==========================================
+Running 3 processes with nice values: 0, 10, 19
+Starting processes...
+Waiting for all processes to complete...
+[Child] PID: 9735, Nice: 0 matrix multiplication
+[Child] PID: 9735, Parent PID: 9732,  Nice: 0 Turnaround time: 1.146976 seconds
+[Parent] Child (PID: 9735) has finished
+[Child] PID: 9736, Nice: 10 matrix multiplication
+[Child] PID: 9736, Parent PID: 9731,  Nice: 10 Turnaround time: 2.211831 seconds
+[Parent] Child (PID: 9736) has finished
+[Child] PID: 9734, Nice: 19 matrix multiplication
+[Child] PID: 9734, Parent PID: 9733,  Nice: 19 Turnaround time: 3.111733 seconds
+[Parent] Child (PID: 9734) has finished
+
+==========================================
+Experiment completed!
+==========================================
+
+To view kernel logs, run:
+ sudo dmesg | grep EEVDF
